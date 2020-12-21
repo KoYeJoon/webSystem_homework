@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 Movies
+    each movie in movieList
+        li(class="movie_description" id="movie"+movie._id)
+            br
+            img(src=movie.url class="movie_img")
+            p=movie.title + "/" + movie.year
+            button(type = "submit" class = "buttonCRUD" value = movie._id onclick=`gotoEdit(this);`) EDIT
+            //button(type = "submit" value = movie._id onclick=`gotoDelete(this);`) DELETE
+            button(type = "submit" class = "buttonCRUD" value = movie._id onclick="ajaxDelete("+ movie._id +")") DELETE
+            -if (movie.trending === true)
+                input(type="image" class="starImg" name = movie._id src="/images/star.svg" value=movie.trending onclick=`gotoNonTrend(this);`)
+            -else
+                input(type="image" class="starImg" name = movie._id src="/images/blackstar.png" value=movie.trending onclick=`gotoTrend(this);`)
+

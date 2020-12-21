@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1 Edit Movie
+    div(class = "editMoviesForm")
+        form(action="/routes/movie/update/"+movie._id, method="POST")
+            label(class="editMovie") Title
+            p
+            input(type="text", name="title" class="editMovie" value=movie.title)
+            p
+            label(class="editMovie") Year
+            p
+            input(type="text", name="year" class="editMovie" value=movie.year)
+            p
+            label(class="editMovie") Image Path
+            p
+            input(type="text", name="url" class="editMovie" value=movie.url)
+            p
+            button(type="submit" class="editMovie") Edit Movie
+
+

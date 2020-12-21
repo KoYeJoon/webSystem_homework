@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1 Add Movie
+    div(class = "newMoviesForm")
+        form(action="/routes/movie/create", method="POST")
+            label(class="newMovie") Title
+            p
+            input(type="text", name="title" class="newMovie")
+            p
+            label(class="newMovie") Year
+            p
+            input(type="text", name="year" class="newMovie")
+            p
+            label(class="newMovie") Image Path
+            p
+            input(type="text", name="url" class="newMovie")
+            p
+            button(type="submit" class="newMovie") Add Movie
+

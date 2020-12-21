@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  //영화정보(영화이름, 영화개봉년도, 영화포스터이미지) 리스트 출력
+  h1 Movies
+
+  each movie in movieList
+    li(class="movie_description" id="movie" + movie._id)
+      br
+      img(src=movie.url class="movie_img")
+      p=movie.title + "/" + movie.year
+
+
+  |
+  br
+  |
+  br
+  // 인기 상영 영화 리스트(영화이름, 영화개봉년도, 영화포스터 이미지 출력)
+  h1 Trending Movies
+
+  each movie in trendMovieList
+    li(class="movie_description" id="movie" + movie._id)
+      br
+      img(src=movie.url class="movie_img")
+      p=movie.title + "/" + movie.year
