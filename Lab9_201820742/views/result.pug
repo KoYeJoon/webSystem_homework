@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    // 이미지
+    img(src=movie_img_url class='movie_image')
+    //영화제목 가져오기
+    h1= movie_title
+    |
+    hr
+    |
+    // 출연진 가져오기
+    p= movie_casting
+    // 장르가져오기
+    p=movie_genre
+    |
+    hr
+    |
+    //별점보여주기
+    -for(var idx=0; idx<movie_rating; idx++)
+       img(src='/images/star.svg' class='rating-star-img')
+    |
+    hr
+    |
+    //돌아가는 버튼 만들기
+    button(type="submit" onclick='location.href="http://localhost:3000/"')="Go Home"
+

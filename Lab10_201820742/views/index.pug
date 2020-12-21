@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    //영화정보(영화이름, 영화개봉년도, 영화포스터이미지) 리스트 출력
+    h1 Movies
+    -if (movieList.length != 0)
+        -for(var idx=0;idx<movieList.length;idx++)
+            div(class="movie_description")
+                br
+                img(src=movieList[idx].url class="movie_img")
+                p=movieList[idx].title+"/"+movieList[idx].year
+    -else
+        h4(class = "noMovie") There are no saved movies in mongoDB
+        h4(class = "noMovie")  Please add Movie !
+
+
+
+    //인기 상영 영화리스트(영화 이름, 영화 개봉년도, 영화 포스터 이미지)출력
+

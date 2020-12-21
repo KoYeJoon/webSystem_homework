@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    //h1= title
+    //p Welcome to #{title}
+    h1="Ajou Movie Information"
+    h3="Register Movie"
+    p="Please enter the movie information to add a review"
+    form(action='http://localhost:3000/result' method='post')
+        p
+        input(type='text' id = 'movie_title' name='movie_title' placeholder= "Write movie title" required)
+        p
+        input(type='text' id = 'movie_casting' name='movie_casting' placeholder= "Write movie casting" required)
+        p
+        input(type='text' id = 'movie_genre' name='movie_genre' placeholder= "Write movie genre" required)
+        p
+        Input(type='text' id = 'movie_img_url' name='movie_img_url' placeholder= "Write movieImgURL" required)
+        p="Movie Ratings"
+        print 0
+        input(type='radio' name='movie_rating' value = "0" required)
+        print 1
+        input(type='radio' name='movie_rating' value = "1" required)
+        print 2
+        input(type='radio' name='movie_rating' value = "2" required)
+        print 3
+        input(type='radio' name='movie_rating' value = "3" required)
+        print 4
+        input(type='radio' name='movie_rating' value = "4" required)
+        print 5
+        input(type='radio' name='movie_rating' value = "5" required)
+        p
+        input(type='submit' name='movie_submit' value="submit")
+

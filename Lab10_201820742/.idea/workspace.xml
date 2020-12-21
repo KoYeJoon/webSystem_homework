@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd95586e-bf5d-4af0-9d50-5e086cb5994a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jv5qf6dsfXMLyc2n7p3g4PxFDE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd95586e-bf5d-4af0-9d50-5e086cb5994a" name="Default Changelist" comment="" />
+      <created>1604671916290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604671916290</updated>
+      <workItem from="1604671917318" duration="838000" />
+      <workItem from="1604672802329" duration="9994000" />
+      <workItem from="1604687116537" duration="14000" />
+      <workItem from="1604687430430" duration="1150000" />
+      <workItem from="1604688743550" duration="137000" />
+      <workItem from="1604689391404" duration="1000" />
+      <workItem from="1604689424718" duration="57000" />
+      <workItem from="1604937239906" duration="2582000" />
+      <workItem from="1604942909332" duration="1129000" />
+      <workItem from="1604945487551" duration="77000" />
+      <workItem from="1605000936286" duration="646000" />
+      <workItem from="1605005638923" duration="47000" />
+      <workItem from="1605006050118" duration="20000" />
+      <workItem from="1605008679677" duration="520000" />
+      <workItem from="1605029288616" duration="512000" />
+      <workItem from="1605031011283" duration="104000" />
+      <workItem from="1605092843904" duration="46000" />
+      <workItem from="1606756019496" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="756" y="244" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604672131357">
+      <screen x="0" y="23" width="1440" height="826" />
+    </state>
+    <state x="756" y="244" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.826@0.23.1440.826" timestamp="1604672131357" />
+    <state x="704" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604671991299">
+      <screen x="0" y="23" width="1440" height="826" />
+    </state>
+    <state x="704" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.826@0.23.1440.826" timestamp="1604671991299" />
+  </component>
+</project>

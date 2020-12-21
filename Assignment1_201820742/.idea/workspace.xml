@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="90486a55-f6f9-4892-aee6-87846a7f4f8c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Template.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Template.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iYf9iGnYnunMiS6y4OTEJHFn0U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90486a55-f6f9-4892-aee6-87846a7f4f8c" name="Default Changelist" comment="" />
+      <created>1602089296411</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602089296411</updated>
+      <workItem from="1602089297433" duration="2125000" />
+      <workItem from="1602149340398" duration="28359000" />
+      <workItem from="1602219163889" duration="7390000" />
+      <workItem from="1602427816113" duration="7035000" />
+      <workItem from="1602491000286" duration="853000" />
+      <workItem from="1602492384267" duration="6000" />
+      <workItem from="1602492447613" duration="4947000" />
+      <workItem from="1602497734034" duration="627000" />
+      <workItem from="1602498778145" duration="1154000" />
+      <workItem from="1602500124253" duration="8929000" />
+      <workItem from="1602511273767" duration="1185000" />
+      <workItem from="1602512797333" duration="35000" />
+      <workItem from="1602520345044" duration="78000" />
+      <workItem from="1602691543550" duration="35000" />
+      <workItem from="1602692370233" duration="19000" />
+      <workItem from="1602776930212" duration="42000" />
+      <workItem from="1602778339607" duration="641000" />
+      <workItem from="1602828545305" duration="216000" />
+      <workItem from="1602828932995" duration="140000" />
+      <workItem from="1603292357787" duration="19000" />
+      <workItem from="1603371843053" duration="2000" />
+      <workItem from="1604214976808" duration="1780000" />
+      <workItem from="1604219288971" duration="36000" />
+      <workItem from="1604219573964" duration="13000" />
+      <workItem from="1604222835092" duration="33000" />
+      <workItem from="1604223939769" duration="54000" />
+      <workItem from="1604224006688" duration="839000" />
+      <workItem from="1604332309090" duration="564000" />
+      <workItem from="1604394497943" duration="142000" />
+      <workItem from="1604674667509" duration="22000" />
+      <workItem from="1605027513871" duration="603000" />
+      <workItem from="1605091844600" duration="83000" />
+      <workItem from="1605106014738" duration="3137000" />
+      <workItem from="1605111437828" duration="632000" />
+      <workItem from="1605112958415" duration="1163000" />
+      <workItem from="1606730358472" duration="2556000" />
+      <workItem from="1606734794301" duration="815000" />
+      <workItem from="1606756062742" duration="7000" />
+      <workItem from="1606838157357" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="23" width="1312" height="825" key="dock-window-1" timestamp="1602496718292">
+      <screen x="0" y="23" width="1440" height="826" />
+    </state>
+    <state x="0" y="23" width="1312" height="825" key="dock-window-1/0.23.1440.826@0.23.1440.826" timestamp="1602496718292" />
+    <state x="633" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1602429054325">
+      <screen x="0" y="23" width="1440" height="826" />
+    </state>
+    <state x="633" y="173" width="670" height="676" key="search.everywhere.popup/0.23.1440.826@0.23.1440.826" timestamp="1602429054325" />
+  </component>
+</project>

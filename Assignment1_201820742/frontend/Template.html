@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Node.js</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;
+        max-width:1024px;}
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        textarea{
+            width:500px;
+            height:100px;
+        }
+        ul{
+            list-style-type : none;
+            margin-top : 0px;
+            padding-left: 0px;
+            margin-left:0px;
+            border:solid thin black;
+        }
+        .contents{
+            border:solid thin black;
+            width : 100%;
+            height : 22px;
+        }
+        .items{
+            float:left;
+            margin:0px;
+        }
+        .name{
+            width : 20%;
+        }
+        .forDelete{
+            width : 10%;
+        }
+        .forRename{
+            width:10%;
+        }
+        .fileSize{
+            text-align : center;
+            width:20%;
+            margin : 0px;
+        }
+        .modificationDate{
+            width:30%;
+            margin : 0px;
+        }
+        .divDir{
+            background-color : #8c8c8c;
+            clear : left;
+            border:solid thin black;
+            width : 100%;
+            height : 22px;
+        }
+        .divFile{
+            background-color:lightgray;
+            clear : left;
+            border:solid thin black;
+            width : 100%;
+            height : 22px;
+        }
+
+        .dir{
+            float : left;
+        }
+        .file{
+            float:left;
+        }
+    </style>
+</head>
+<body>
+<!--<h1><a href="/">Node.js</a></h1>-->
+
+<button id="dirCreateBtn">폴더생성</button>
+<!-- The Modal -->
+<div id="dirCreate" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="http://localhost:3000/mkdir" method = "Post">
+            <h3>폴더생성</h3>
+            <input id="dirName" name = "dir_name" type = "text">
+            <br />
+            <input type="submit" value = "mkdir">
+        </form>
+    </div>
+</div>
+
+<button id="fileCreateBtn" >파일생성</button>
+<!-- The Modal -->
+<div id="fileCreate" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="http://localhost:3000/editfile" method = "Post">
+            <h3>파일편집</h3>
+            <input id="fileTitle" name = "title" type = "text">
+            <br />
+            <textarea id="fileData" name="description"></textarea>
+            <br />
+            <input type="submit" value = "편집저장">
+        </form>
+    </div>
+</div>
+
+<!--<button id="renameBtn">rename</button>-->
+<!-- The Modal -->
+<div id="rename" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="http://localhost:3000/rename" method = "Post">
+            <input id="modName" name = "mod_name" type = "text">
+            <input id="originName" name="origin_name"  type="hidden">
+            <input type="submit" value = "Rename">
+        </form>
+    </div>
+</div>
+
+
+<ul>
+    <div class="contents">
+        <p class="items name">Name</p>
+        <pre class="items forDelete"> </pre>
+        <pre class="items forRename"> </pre>
+        <p class="items fileSize">file size</p>
+        <p class="items modificationDate">Modification date</p>
+    </div>
+
+        ?
+
+</ul>
+
+
+<!--<h2>^</h2>-->
+<!--<p>$</p>-->
+
+
+
+
+<script type = "text/javascript">
+    // Get the modal
+    var dirCreateModal = document.getElementById("dirCreate");
+    // Get the button that opens the modal
+    var dirCreatebtn = document.getElementById("dirCreateBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal
+    dirCreatebtn.onclick = function() {
+        dirCreateModal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        dirCreateModal.style.display = "none";
+        document.getElementById("dirName").value="";
+
+    }
+
+
+    // Get the modal
+    var fileCreateModal = document.getElementById("fileCreate");
+    // Get the button that opens the modal
+    var fileCreatebtn = document.getElementById("fileCreateBtn");
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close")[1];
+    // When the user clicks the button, open the modal
+
+
+    function displayFileCreate() {
+        fileCreateModal.style.display = "block";
+    }
+    fileCreatebtn.onclick=displayFileCreate;
+
+
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function() {
+        document.getElementById("fileTitle").value = "";
+        document.getElementById("fileData").value = "";
+        fileCreateModal.style.display = "none";
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = "http://localhost:3000/";
+        const hiddenField = document.createElement('input');
+        hiddenField.type='hidden';
+        hiddenField.name = 'hidden_value';
+        hiddenField.value = "0";
+        form.appendChild(hiddenField);
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+
+    // Get the modal
+    var renameModal = document.getElementById("rename");
+    // Get the button that opens the modal
+    var renameBtn = document.getElementById("renameBtn");
+    var span3 = document.getElementsByClassName("close")[2];
+    // renameBtn.onclick = function() {
+    //     renameModal.style.display = "block";
+    // }
+    // When the user clicks on <span> (x), close the modal
+    span3.onclick = function() {
+        renameModal.style.display = "none";
+        document.getElementById("modName").value = "";
+        document.getElementById("originName").value = "";
+
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == dirCreateModal) {
+            //console.log("1");
+            dirCreateModal.style.display = "none";
+            document.getElementById("dirName").value="";
+        }
+
+        else if (event.target == fileCreateModal) {
+            console.log("2");
+            document.getElementById("fileTitle").value = "";
+            document.getElementById("fileData").value = "";
+            fileCreateModal.style.display = "none";
+            const form = document.createElement('form');
+            form.method = 'post';
+            form.action = "http://localhost:3000/";
+            const hiddenField = document.createElement('input');
+            hiddenField.type='hidden';
+            hiddenField.name = 'hidden_value';
+            hiddenField.value = "0";
+            form.appendChild(hiddenField);
+            document.body.appendChild(form);
+            form.submit();
+        }
+        else if (event.target == renameModal ) {
+            //console.log("3");
+            renameModal.style.display = "none";
+            document.getElementById("modName").value = "";
+            document.getElementById("originName").value = "";
+        }
+
+    }
+
+    // 디렉토리 이동 요청 함수 - 디렉토리 정보 전달
+    function changeDir(link){
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = "http://localhost:3000/cd";
+        const hiddenField = document.createElement('input');
+        hiddenField.type='hidden';
+        hiddenField.name = 'dir_name';
+        hiddenField.value = link.textContent;
+        form.appendChild(hiddenField);
+        document.body.appendChild(form);
+        form.submit();
+    }
+    // 파일 읽기 함수 - 파일 이름 정보 전달
+    function readfile(link){
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = "http://localhost:3000/readfile";
+        const hiddenField = document.createElement('input');
+        hiddenField.type='hidden';
+        hiddenField.name = 'file_name';
+        hiddenField.value = link.textContent;
+        form.appendChild(hiddenField);
+        document.body.appendChild(form);
+        form.submit();
+    }
+    // 디렉토리 삭제 함수 - 디렉토리 이름 정보 전달
+    function delDir(link){
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = "http://localhost:3000/rmdir";
+        const hiddenField = document.createElement('input');
+        hiddenField.type='hidden';
+        hiddenField.name = 'dir_name';
+        hiddenField.value = link.value;
+        form.appendChild(hiddenField);
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    // 파일 삭제 함수 - 파일의 이름 정보 전달
+    function delFile(link){
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = "http://localhost:3000/rmFile";
+        const hiddenField = document.createElement('input');
+        hiddenField.type='hidden';
+        hiddenField.name = 'file_name';
+        hiddenField.value = link.value;
+        form.appendChild(hiddenField);
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+
+    // 이름 변경 요청 함수 - 이름바꾸기 form 내의 text type의 input element 및 hidden type의 input element에 저장
+    function rename(link){
+        renameModal.style.display = "block";
+        document.getElementById("modName").value = link.value;
+        document.getElementById("originName").value = link.value;
+    }
+</script>
+
+</body>
+</html>

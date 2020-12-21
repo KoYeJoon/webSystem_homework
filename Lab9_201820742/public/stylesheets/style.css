@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.movie_image{
+  height:600px;
+  width:165px;
+}
+.rating-star-img{
+  height : 50px;
+  width : 50px;
+
+}
